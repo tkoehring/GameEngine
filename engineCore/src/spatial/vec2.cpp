@@ -1,6 +1,6 @@
 #include "vec2.h"
 
-namespace engine { namespace vectors {
+namespace engine { namespace spatial {
 
 	
 

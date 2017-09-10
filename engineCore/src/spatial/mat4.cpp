@@ -1,6 +1,6 @@
 #include "mat4.h"
 
-namespace engine { namespace matrices {
+namespace engine { namespace spatial {
 
 		mat4::mat4()
 		{
@@ -67,7 +67,7 @@ namespace engine { namespace matrices {
 			return result;
 		}
 		
-		mat4 mat4::translation(const vectors::vec3 &translation)
+		mat4 mat4::translation(const vec3 &translation)
 		{
 			mat4 result(1.0f);
 			result.elements[12] = translation.x;
@@ -76,7 +76,7 @@ namespace engine { namespace matrices {
 			return result;
 		}
 
-		mat4 mat4::rotation(float angle, const vectors::vec3 &axis)
+		mat4 mat4::rotation(float angle, const vec3 &axis)
 		{
 			mat4 result(1.0f);
 			angle = ((angle * M_PI) / 180);
@@ -98,7 +98,7 @@ namespace engine { namespace matrices {
 			return result;
 		}
 
-		mat4 mat4::scale(const vectors::vec3 &scale)
+		mat4 mat4::scale(const vec3 &scale)
 		{
 			mat4 result(1.0f);
 			result.elements[0] = scale.x;
